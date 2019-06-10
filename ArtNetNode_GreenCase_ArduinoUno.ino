@@ -71,6 +71,7 @@ void setup(){
       ip[thisByte] = Ethernet.localIP()[thisByte];
     }
     dhcp_successful = true;
+    artnet.begin();          // !!! Uses given Subnet (DHCP)
   }
   else{    // If == 0 --> DHCP failed
     beepiezo(1500, 200);
@@ -84,11 +85,11 @@ void setup(){
     beepiezo(1500, 200);
     delay(100);
     beepiezo(1900, 200);
+    artnet.begin(mac, ip);   // !!! Assumes Subnet /24 (255.255.255.0)
   }
   
   DMXSerial.init(DMXController);
   
-  artnet.begin(mac, ip);
   delay(200);
   beepiezo(4100, 200);
   beepiezo(3000, 200);
