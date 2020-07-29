@@ -11,11 +11,9 @@
 //
 // ArtPollReply implemented in library ArtNet.cpp :)
 // Caution: The ArtNetominator prevents ArtPollReply packets from arriving at QLC!
-//
-// Note the second option for MAC address (below) for FSMach GreeNode
 
 
-#include <Artnet.h>
+#include "DIYArtnet.h"    // Use lib file in sketch dir for specific ArtPollReply, Serial.prints commented in DIYArtnet.cpp to avoid compilation error
 #include <Ethernet.h>
 //#include <EthernetUdp.h>
 #include <SPI.h>
@@ -26,8 +24,7 @@ Artnet artnet;
 
 // Change ip and mac address for your setup
 byte ip[] = {192, 168, 1, 5};                          // IP if DHCP not available
-//byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0x55};     // First GreeNode (osteigauf)
-byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0xAA};   // Second GreeNode (FSMach)
+byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0xAA};   // GreeNode (FSMach)
 
 long enableSaveTime = 0;
 boolean dhcp_successful = false;
