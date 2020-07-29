@@ -22,7 +22,7 @@
 // Note the second option for MAC address (below) for FSMach GreeNode
 
 
-#include <Artnet.h>         // All Serial.prints commented in Artnet.cpp to avoid compiling errors
+#include "DIYArtnet.h"         // Using lib file in sketch dir for specific ArtPollReply, Serial.prints commented in Artnet.cpp to avoid compiling errors
 #include <Ethernet.h>
 //#include <EthernetUdp.h>
 #include <SPI.h>
