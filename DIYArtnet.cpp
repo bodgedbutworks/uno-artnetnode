@@ -108,23 +108,23 @@ void Artnet::sendArtPollreply()
 						   192,		//Status 1 (Various Status bits)
 						   119,		//ESTA Manufacturer Code Hi
 						   100,		//ESTA Manufacturer Code Lo (--> Used ID of "WET" for now
-					int('F'),	//ShortName
-					int('S'),	//ShortName
-					int(' '),	//ShortName
-					int('M'),	//ShortName
+					int('R'),	//ShortName
 					int('a'),	//ShortName
-					int('c'),	//ShortName
-					int('h'),	//ShortName
+					int('v'),	//ShortName
+					int('v'),	//ShortName
+					int('e'),	//ShortName
+					int('n'),	//ShortName
 					int(' '),	//ShortName
-					int(' '),	//ShortName
-					int('G'),	//ShortName
+					int('A'),	//ShortName
 					int('r'),	//ShortName
-					int('e'),	//ShortName
-					int('e'),	//ShortName
+					int('t'),	//ShortName
 					int('N'),	//ShortName
 					int('o'),	//ShortName
 					int('d'),	//ShortName
 					int('e'),	//ShortName
+					int(' '),	//ShortName
+					int(' '),	//ShortName
+					int(' '),	//ShortName
 					0,			//ShortName ('\0' to terminate String!)
 							int('A'),	//LongName
 							int('e'),	//LongName
@@ -152,12 +152,12 @@ void Artnet::sendArtPollreply()
 							int('o'),	//LongName
 							int('r'),	//LongName
 							int(' '),	//LongName
-							int('F'),	//LongName
-							int('S'),	//LongName
-							int('M'),	//LongName
+							int('R'),	//LongName
 							int('a'),	//LongName
-							int('c'),	//LongName
-							int('h'),	//LongName
+							int('v'),	//LongName
+							int('v'),	//LongName
+							int('e'),	//LongName
+							int('n'),	//LongName
 							int(' '),	//LongName
 							int('i'),	//LongName
 							int('n'),	//LongName
@@ -168,11 +168,11 @@ void Artnet::sendArtPollreply()
 							int('c'),	//LongName
 							int('y'),	//LongName
 							int(' '),	//LongName
-							int('g'),	//LongName
-							int('r'),	//LongName
-							int('e'),	//LongName
-							int('e'),	//LongName
-							int('n'),	//LongName
+							int('b'),	//LongName
+							int('l'),	//LongName
+							int('a'),	//LongName
+							int('c'),	//LongName
+							int('k'),	//LongName
 							int(' '),	//LongName
 							int('e'),	//LongName
 							int('n'),	//LongName
@@ -288,11 +288,11 @@ void Artnet::sendArtPollreply()
 							int(0x72),		//MAC Adress (MSB to LSB)
 							int(0xA8),		//MAC Adress (MSB to LSB)
 							int(0xBA),		//MAC Adress (MSB to LSB)
-							int(0xAA),		//MAC Adress (MSB to LSB)
+							int(0xAB),		//MAC Adress (MSB to LSB)
 							Ethernet.localIP()[0],	//IP Address of this Node
-						    Ethernet.localIP()[1],	//IP Address of this Node
-						    Ethernet.localIP()[2],	//IP Address of this Node
-						    Ethernet.localIP()[3],	//IP Address of this Node
+						  Ethernet.localIP()[1],	//IP Address of this Node
+						  Ethernet.localIP()[2],	//IP Address of this Node
+						  Ethernet.localIP()[3],	//IP Address of this Node
 							1,		//BindIndex
 							14,		//Status2
 					0,	//Filler
