@@ -19,7 +19,7 @@
 //  0 Green (ArtNet Packet received)        LED: 20mA @ 2.90V --> Resistor: 100ohms
 //  0 Blue (CH1 Test LED)                   LED: 20mA @ 2.84V --> Resistor: 120 Ohms
 //
-// Note the second option for MAC address (below) for FSMach GreeNode
+// Note the branches for FSMach GreeNode / other nodes with specific ArtPollReply
 
 
 #include "DIYArtnet.h"         // Using lib file in sketch dir for specific ArtPollReply, Serial.prints commented in Artnet.cpp to avoid compiling errors
@@ -42,8 +42,7 @@ Artnet artnet;
 
 // Change ip and mac address for your setup
 byte ip[] = {192, 168, 1, 5};                          // IP if DHCP not available
-byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0x55};     // First GreeNode (osteigauf)
-//byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0xAA};   // Second GreeNode (FSMach)
+byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0x55};     // GreeNode (AeroTrax)
 
 long enableSaveTime = 0;
 boolean dhcp_successful = false;
