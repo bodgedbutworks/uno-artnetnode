@@ -42,7 +42,7 @@ Artnet artnet;
 
 // Change ip and mac address for your setup
 byte ip[] = {192, 168, 1, 5};                          // IP if DHCP not available
-byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0x55};     // GreeNode (AeroTrax)
+byte mac[] = {0xAE, 0x20, 0x72, 0xA8, 0xBA, 0xAA};     // GreeNode (AeroTrax)
 
 long enableSaveTime = 0;
 boolean dhcp_successful = false;
