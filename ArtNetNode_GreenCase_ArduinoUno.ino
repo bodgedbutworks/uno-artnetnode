@@ -1,4 +1,5 @@
 // Use with Arduino IDE 1.5.2
+// Important: Place capacitor >=47nF between GND and RESET, otherwise Ethernet shield doesn't properly boot from time to time (!)
 //
 // Ethernet.localIP()
 // Ethernet.subnetMask()
